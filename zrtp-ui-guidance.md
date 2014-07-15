@@ -199,7 +199,7 @@ indeterminate security until the SAS has been verified, in the case of
 a cache mismatch the call must be treated as insecure until the SAS is
 verified.
 
-Once the user indicates the words match, we can set the Verified
+Once the user indicates the words do match, we can set the Verified
 state; we are now ZRTP Secure.
 
 If the words do not match, we must present a strong warning as shown
