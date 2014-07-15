@@ -234,6 +234,6 @@ clearly alerted.
 
 ---
 
-*Document Version: v0.1*
+`Document Version: v0.1`
 
-*Document ID: fcd6839b-b2fb-4e06-8f85-c6c1dcb7e263*
+`Document ID: fcd6839b-b2fb-4e06-8f85-c6c1dcb7e263`
