@@ -220,7 +220,7 @@ Secure, the signaling is via TLS with a valid, properly-authenticated
 certificate, and a=zrtp-hash was provided by the remote end and its
 value correctly matched our ZRTP negotiation.
 
-ZRTP Green Secure provides our highest level of security assurance.
+ZRTP Green Secure provides the highest level of security assurance.
 
 ### Looking for Peer
 
@@ -253,7 +253,7 @@ The highest level of security assurance is ZRTP Green Secure.  It can
 be shown only when the call is ZRTP Secure and all aspects of the
 negotiation proceeded perfectly.
 
-Our next highest level of assurance is ZRTP Secure.  It can be shown
+The next highest level of assurance is ZRTP Secure.  It can be shown
 when the users verify the SAS on the current call or when they've done
 so on earlier calls and we have a cache match.
 
