@@ -234,6 +234,8 @@ clearly alerted.
 
 ---
 
+`Author: Travis Cross <tc@traviscross.com>`
+
 `Document Version: v0.1`
 
 `Document ID: fcd6839b-b2fb-4e06-8f85-c6c1dcb7e263`
