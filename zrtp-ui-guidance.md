@@ -21,8 +21,8 @@ If we're sending unsecured media for any reason (RTP rather than
 SRTP), then the call is not secure and the user must be warned loudly
 about this.  e.g.:
 
-    This call is NOT secure.  The audio and video
-    of this call may be intercepted by anyone.
+> This call is NOT secure.  The audio and video of this call may be
+> intercepted by anyone.
 
 ## TLS Signaling Security
 
@@ -35,18 +35,15 @@ warn the user loudly about this.
 e.g., in the case of signaling by UDP, TCP without TLS, or where no
 TLS certificate authentication was performed:
 
-    Your connection with the server is NOT secure.
-    Information regarding who is calling whom may
-    be intercepted by anyone, and calls may not be
-    confidential.
+> Your connection with the server is NOT secure.  Information
+> regarding who is calling whom may be intercepted by anyone, and
+> calls may not be confidential.
 
 e.g., in the case of a TLS certificate authentication failure:
 
-    Your connection with the server is NOT secure.
-    The server is being impersonated by an
-    untrusted party.  Information regarding who is
-    calling whom may be intercepted, and calls may
-    not be confidential.
+> Your connection with the server is NOT secure.  The server is being
+> impersonated by an untrusted party.  Information regarding who is
+> calling whom may be intercepted, and calls may not be confidential.
 
 In either case, we must never enter the Secure to Server state
 described below.  Further, we must suppress any treatment of
@@ -116,12 +113,11 @@ Secure to Server call, but possibly not much more.
 
 When the user chooses to verify the SAS, she might be prompted, e.g.:
 
-    Please compare the words on screen with those
-    seen by the other caller.  Read the words
-    aloud to each other and verify you see the
-    same words.  Select:
-
-      They match | Not a match
+> Please compare the words on screen with those seen by the other
+> caller.  Read the words aloud to each other and verify you see the
+> same words.  Select:
+>
+>   They match | Not a match
 
 If the words match, the call is ZRTP Secure -- the highest level of
 assurance, and we can set the Verified flag as described below.
@@ -132,17 +128,14 @@ possible security state -- even worse than unencrypted media.  We must
 communicate to the user in clear and convincing language that she
 cannot trust this call and must evaluate her security.  e.g.:
 
-    If you and the other caller do not see the
-    same words on screen, this call is NOT secure.
-    Someone is actively trying to intercept your
-    call.  Do not discuss sensitive information.
-
-    We would like to hear about this incident.  If
-    you can, please contact support and tell us
-    you've had an "SAS mismatch."  We will treat
-    this as serious.  We'll help you improve your
-    security, and your report will help the
-    security of others.
+> If you and the other caller do not see the same words on screen,
+> this call is NOT secure.  Someone is actively trying to intercept
+> your call.  Do not discuss sensitive information.
+>
+> We would like to hear about this incident.  If you can, please
+> contact support and tell us you've had an "SAS mismatch."  We will
+> treat this as serious.  We'll help you improve your security, and
+> your report will help the security of others.
 
 ### The Cache Name
 
@@ -196,10 +189,9 @@ user to complete these steps by e.g. automatically presenting the SAS
 comparison modal dialog.  We should prefix the normal SAS comparison
 dialog by a warning, e.g.:
 
-    There has been an unexpected error while
-    securing your call.  To ensure the security of
-    this and future calls, you must verify some
-    information with the other caller.
+> There has been an unexpected error while securing your call.  To
+> ensure the security of this and future calls, you must verify some
+> information with the other caller.
 
 Unlike in the normal case where a call can be treated as having
 indeterminate security until the SAS has been verified, in the case of
