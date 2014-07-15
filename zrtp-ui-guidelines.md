@@ -208,6 +208,31 @@ above for an SAS mismatch.
 If the user does not verify the SAS by the end of the call, the next
 call will show a cache mismatch as well.
 
+### Looking for Peer
+
+At the outset of a call, the user's local client will try to determine
+if the remote client also supports ZRTP.  This is the Looking for Peer
+state, which could persist throughout the entire call, and may
+optionally be displayed to the user.  The essence of this operation is
+that the client is determining the best security level available for
+the call.  If the UI displays this state, it may stop displaying this
+state after a few seconds even though the software is continuing to
+look for ZRTP support on the remote end.
+
+### Going Secure
+
+If the remote client is found to support ZRTP, the local client will
+either send a ZRTP Commit message or be in receipt of a ZRTP Commit
+message from the remote client.  Once a ZRTP Commit message is sent or
+received, the client is in the Going Secure state.  This state must be
+displayed clearly to the user, and must continue to be displayed until
+ZRTP is successfully negotiated or until a ZRTP error occurs and the
+negotiation is aborted.
+
+It's important that the user be shown Going Secure so she knows what
+to expect and can usefully describe issues she may encounter with
+e.g. calls failing to go secure.
+
 ## Summary
 
 The highest level of security is ZRTP Secure.  It can be shown when
@@ -224,6 +249,10 @@ the SAS.
 
 ZRTP stores a cache name for each remote party, and this name must be
 displayed prominently to the user to ensure security.
+
+The user must be informed when the call is Going Secure, and may be
+informed when the client is determining whether the other end supports
+ZRTP.
 
 When ZRTP has not been negotiated but TLS and SDES are in place, the
 call is Secure to Server.  This is the lowest form of acceptable
