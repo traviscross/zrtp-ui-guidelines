@@ -17,9 +17,9 @@ security assurances.
 
 ## Unencrypted Media
 
-If we're sending unsecured media for any reason (RTP rather than
-SRTP), then the call is not secure and the user must be warned loudly
-about this.  e.g.:
+If we're sending or receiving unsecured media for any reason (RTP
+rather than SRTP), then the call is not secure and the user must be
+warned loudly about this.  e.g.:
 
 > *This call is NOT secure.  The audio and video of this call may be
 > intercepted by anyone.*
