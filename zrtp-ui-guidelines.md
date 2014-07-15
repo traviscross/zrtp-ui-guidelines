@@ -117,7 +117,7 @@ When the user chooses to verify the SAS, she might be prompted, e.g.:
 > caller.  Read the words aloud to each other and verify you see the
 > same words.  Select:*
 >
->   **They match** | **Not a match**
+>   **They match** | **Not a match** | **Later**
 
 If the words match, the call is ZRTP Secure -- the highest level of
 assurance, and we can set the Verified flag as described below.
