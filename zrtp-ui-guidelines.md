@@ -119,8 +119,8 @@ When the user chooses to verify the SAS, she might be prompted, e.g.:
 >
 >   **They match** | **Not a match** | **Later**
 
-If the words match, the call is ZRTP Secure -- the highest level of
-assurance, and we can set the Verified flag as described below.
+If the words match, the call is ZRTP Secure, and we can set the
+Verified flag as described below.
 
 If the words do not match, the call is being wiretapped.  This is an
 SAS mismatch.  The user is under an active attack.  This is the worst
@@ -208,6 +208,20 @@ above for an SAS mismatch.
 If the user does not verify the SAS by the end of the call, the next
 call will show a cache mismatch as well.
 
+### ZRTP Green Secure
+
+The ZRTP Secure state provides a strong level of assurance; it
+provides that the call is secure end-to-end and safe from any known
+threats.  The ZRTP Green Secure state extends this level of assurance
+with the guarantee that every security parameter met our expectations.
+
+The ZRTP Green Secure state can be shown only when the call is ZRTP
+Secure, the signaling is via TLS with a valid, properly-authenticated
+certificate, and a=zrtp-hash was provided by the remote end and its
+value correctly matched our ZRTP negotiation.
+
+ZRTP Green Secure provides our highest level of security assurance.
+
 ### Looking for Peer
 
 At the outset of a call, the user's local client will try to determine
@@ -235,9 +249,13 @@ e.g. calls failing to go secure.
 
 ## Summary
 
-The highest level of security is ZRTP Secure.  It can be shown when
-the users verify the SAS on the current call or when they've done so
-on earlier calls and we have a cache match.
+The highest level of security assurance is ZRTP Green Secure.  It can
+be shown only when the call is ZRTP Secure and all aspects of the
+negotiation proceeded perfectly.
+
+Our next highest level of assurance is ZRTP Secure.  It can be shown
+when the users verify the SAS on the current call or when they've done
+so on earlier calls and we have a cache match.
 
 Users must be advised of the severity of an SAS mismatch.
 
