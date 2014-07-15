@@ -178,7 +178,8 @@ shown until the user verifies the SAS on the current call.
 On subsequent calls the local cached secret will not be empty.  Once
 ZRTP has negotiated we'll know whether this value matches the value on
 the other end.  Only if it does and both the local and the remote V
-flag are set may we show the Verified state at the outset of the call.
+flags are set may we show the Verified state at the outset of the
+call.
 
 If we have a local cached secret and it does not match the cached
 secret of our remote peer, then we have a cache mismatch.  This is a
