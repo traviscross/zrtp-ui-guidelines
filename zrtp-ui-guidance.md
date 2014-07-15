@@ -110,10 +110,7 @@ that the words have been compared and the outcome of that comparison.
 Until the user has verified the SAS, the security state of the call is
 indeterminate.  Unless we're raising one of the alarms described
 below, or above, we can assert the call is at least as secure as a
-Secure to Server call.  While depending on the state of the cache,
-described below, the call may be slightly more secure, it's difficult
-to quantify this without tracking more details of prior calls than we
-currently do.
+Secure to Server call, but possibly not much more.
 
 When the user chooses to verify the SAS, she might be prompted, e.g.:
 
@@ -222,9 +219,8 @@ Users must be advised of the severity of an SAS mismatch.
 Users with a ZRTP session who have not verified the SAS have an
 indeterminate security state.  If there is no cache this state is
 approximately as secure as Secure to Server.  If there is a cache
-match the security may be modestly higher, but it is difficult to
-quantify.  If there is a cache mismatch the call must be treated as
-insecure until the users compare the SAS.
+mismatch the call must be treated as insecure until the users compare
+the SAS.
 
 ZRTP stores a cache name for each remote party, and this name must be
 displayed prominently to the user to ensure security.
