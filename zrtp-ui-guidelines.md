@@ -286,6 +286,6 @@ clearly alerted.
 
 `Date: 2014-07-15`
 
-`Document Version: v0.3`
+`Document Version: v0.4`
 
 `Document ID: fcd6839b-b2fb-4e06-8f85-c6c1dcb7e263`
