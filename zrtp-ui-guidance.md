@@ -167,9 +167,9 @@ see below.
 
 ### The Cache: RS1
 
-After two users make a call, ZRTP will retain for each some shared
-secret information on both devices.  This secret is the same on both
-sides and is called RS1 or the cached secret.
+After two users make a call, ZRTP will retain some shared secret
+information on both devices.  This secret is the same on both sides
+and is called RS1 or the cached secret.
 
 On the first call between two users both clients will see that there
 is no cached secret.  In this case, the Verified state must not be
