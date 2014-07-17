@@ -162,7 +162,7 @@ remote peer on the next call.
 
 If both users have verified the SAS on a previous call then the call
 is considered Verified and ZRTP Secure without requiring the local
-user to verify the SAS -- but only if we have an cache match as we'll
+user to verify the SAS -- but only if we have a cache match as we'll
 see below.
 
 ### The Cache: RS1
