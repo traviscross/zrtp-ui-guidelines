@@ -58,7 +58,7 @@ simply result in the connection failing completely.)
 ## SDP Security Descriptions (SDES)
 
 If there is an authenticated TLS connection with the server, and the
-media is SRTP keyed by the SDP Security Descriptions (SDP) in the
+media is SRTP keyed by the SDP Security Descriptions (SDES) in the
 signaling, then the call is Secure to Server.  The call can be
 wiretapped by the server, by parties capable of coercing or subverting
 those managing the server, and by anyone who can wiretap the other leg
