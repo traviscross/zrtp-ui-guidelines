@@ -146,12 +146,30 @@ must be given the opportunity to see and edit the value.
 
 This value is called the cache name.  Once it has been set, it must be
 prominently displayed to the user on this call and in all future
-calls.  The user can be allowed to edit this value at any time.
+calls.
 
 That the user confirms the name of the remote party, and that this
-name is displayed prominently, is critical for security.  There is a
-trivial and well known method of performing a man-in-the-middle (MitM)
-attack against the user if this value is not displayed.
+name is displayed prominently, is critical for security.  We'll expect
+on all future calls that the cache name matches the person to whom the
+user is talking.  If it does not, we have a cache name mismatch.
+
+The user can be allowed to edit the cache name at any time as long as
+we communicate that a mismatch compromises security.  The user must
+know that a cache name mismatch is not a simple mistake.  We should
+encourage the user to verbally compare the SAS when editing the cache
+name as this will reestablish security.  We might e.g. display this
+warning prefixed to the SAS comparison modal dialog:
+
+> *If you previously set this name correctly, and it now does not
+> match the name of the other caller, this call may not be secure.  To
+> ensure the security of this and future calls, you must verify some
+> information with the other caller.*
+
+If we were to not display the cache name, or if the user did not
+understand the seriousness of a mismatch, there would be a trivial and
+well known method of performing a man-in-the-middle (MitM) attack
+against the user which would compromise the confidentiality of even a
+ZRTP Green Secure call.
 
 ### The Verified Flag
 
@@ -266,7 +284,8 @@ mismatch the call must be treated as insecure until the users compare
 the SAS.
 
 ZRTP stores a cache name for each remote party, and this name must be
-displayed prominently to the user to ensure security.
+displayed prominently to the user to ensure security.  We must tell
+the user to expect this name to match the name of the other party.
 
 The user must be informed when the call is Going Secure, and may be
 informed when the client is determining whether the other end supports
