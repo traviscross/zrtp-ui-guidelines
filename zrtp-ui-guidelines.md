@@ -303,9 +303,9 @@ clearly alerted.
 
 `Author: Travis Cross <tc@traviscross.com>`
 
-`Date: 2014-07-15`
+`Date: 2014-07-17`
 
-`Document Version: v0.6`
+`Document Version: v0.7`
 
 `Document ID: fcd6839b-b2fb-4e06-8f85-c6c1dcb7e263`
 
